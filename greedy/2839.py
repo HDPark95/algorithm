@@ -6,20 +6,30 @@
 상근이가 설탕을 정확하게 N킬로그램 배달해야 할 때, 봉지 몇 개를 가져가면 되는지 그 수를 구하는 프로그램을 작성하시오.
 """
 
-#값 입력
-input_value = int(input())
+n = int(input())
+# 초기화
+five = 0
+three = 0
 
-#input 값이 올바르지 않을 경우 print(-1)
-if input_value <= 3 and 5000 <=input_value:
-    print(-1)
+# 최대 5kg의 갯수와 나머지를 구한다.
+five = n // 5
+b = n % 5
 
-number_of_5 = input_value // 5
-rest = input_value % 5
-if rest % 3 == 0:
-    number_of_3 = rest // 3
-    print(number_of_5 + number_of_3)
-else:
-    print(-1)
+# 나머지가 0이 아니면 3kg 갯수를 구한다.
+if b != 0:
+    while five >= 0:
+        if b % 3 == 0:
+            three = b // 3
+            break
+        five -= 1
+        b += 5
+
+ret = five + three
+
+if ret < 1:
+    ret = -1
+print(ret)
+
 
 """
  5로 나눈 나머지에 3으로 나눴을때 나머지가 0인 경우 그 몫을 합한 값을 출력
