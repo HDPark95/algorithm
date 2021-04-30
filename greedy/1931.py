@@ -16,7 +16,7 @@
 
 import sys
 
-#회의 숫자
+#회의 숫자1
 max_number_of_meeting_room = int(input())
 
 schedules = []
@@ -24,7 +24,5 @@ while True:
     a, b = map(int, sys.stdin.readline().split())
     schedules.append((a, b))
 
-
-
-
+#튜플 정렬하기
 
