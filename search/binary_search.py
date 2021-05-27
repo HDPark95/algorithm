@@ -31,7 +31,6 @@ if result == None:
 else:
     print(result + 1)
 
-#TODO 단순 반복문을 활용한 이진탐색
 def binary_search_by_for(array, target, start, end):
     while start <= end:
         mid = (start + end) // 2
